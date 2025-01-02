@@ -24,10 +24,12 @@ public class Main {
                 filetarget.createNewFile();
             }
             File[] files = filesource.listFiles();
-            for (File file : files) {
+            int lastindex = 0;
+            for (File file : files) 
+            {
                 if(file.getName().endsWith(".vm"))
                 {
-                    ProceesDir(file, filetarget);
+                    lastindex = ProceesDir(file, filetarget,lastindex);
                 }
             }
         }
@@ -35,13 +37,15 @@ public class Main {
             Process(filesource);
         }
     }
-    public static  void ProceesDir (File filesource, File filetarget) throws IOException {
+    public static  int ProceesDir (File filesource, File filetarget,int index) throws IOException {
         Scanner readsourcefile = new Scanner((filesource));
         Parser parser = new Parser(filesource);
         parser = new Parser(filesource);
+        int lastindex = 0;
         try (FileWriter writetagetbuffer = new FileWriter(filetarget,true);) {
-            CodeWriter codewriter = new CodeWriter(filetarget, writetagetbuffer);
-            while (parser.hasMoreLines()) {
+            CodeWriter codewriter = new CodeWriter(filetarget, writetagetbuffer,index);
+            while (parser.hasMoreLines()) 
+            {
                 parser.advance();
                 if (parser.commandType() == CommandType.C_ARITHMETIC) {
                     codewriter.writeArithmetic(parser.arg1());
@@ -49,10 +53,12 @@ public class Main {
                     codewriter.writePushPop(parser.commandType(), parser.arg1(), parser.arg2());
                 }
             }
+            lastindex = codewriter.getindex();
 
         }  finally {
             readsourcefile.close();
         }
+        return lastindex;
     }
     public static  void Process (File filesource) throws IOException {
         Scanner readsourcefile = new Scanner((filesource));
@@ -65,7 +71,7 @@ public class Main {
         try {
             filetarget.createNewFile();
             try (FileWriter writetagetbuffer = new FileWriter(filetarget);) {
-                CodeWriter codewriter = new CodeWriter(filetarget, writetagetbuffer);
+                CodeWriter codewriter = new CodeWriter(filetarget, writetagetbuffer,0);
                 while (parser.hasMoreLines()) {
                     parser.advance();
                     if (parser.commandType() == CommandType.C_ARITHMETIC) {
@@ -82,5 +88,3 @@ public class Main {
         }
     }
 }
-
-//File filesource = new File("/Users/yoavcohen/Desktop/Reichman/NandToTetris/project7/project77/BasicTest.vm")
