@@ -25,14 +25,15 @@ This repository is organized according to the course's project structure. Each f
 - **Project 7 & 8: Virtual Machine**
   - Building a stack-based virtual machine and translator.
 - **Project 9: Building a Game**
-  - Designing and implementing a simple game using the Jack programming language.
+  - Designing and implementing a simple game using the **Jack** programming language.
 - **Project 10 & 11: Building a Compiler**
   - Designing and completing the Jack compiler.
 
 ## Tools and Languages
 
 - **Hardware Description Language (HDL):** For designing logic gates and computer architecture.
-- **Jack Programming Language:** For higher-level programming and compiler construction.
+- **Jack Programming Language:** For building the game and compiling the Jack language.
+- **Java:** For high-level programming to complement the projects.
 - **Assembler and Virtual Machine Tools:** To bridge hardware and software development.
 
 ## Goals
@@ -53,11 +54,11 @@ This repository is a personal learning project, but I'm open to suggestions, dis
 
 ## License
 
-This project is under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for full details.
 
 ## Connect
 
 - GitHub Profile: https://github.com/liramkreiner
 - Contact: liramkreiner@gmail.com
 
-Thank you for visiting my repository! 🚀
+Thank you for visiting my repository! 🚀  
