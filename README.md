@@ -25,7 +25,7 @@ This repository is organized according to the course's project structure. Each f
 - **Project 7 & 8: Virtual Machine**
   - Building a stack-based virtual machine and translator.
 - **Project 9: Building a Game**
-  - Designing and implementing a simple game using the **Jack** programming language.
+  - Designing and implementing a simple game using the **Jack** programming language. Check out the [Backmon game](https://github.com/liramkreiner/Backgammon) here.
 - **Project 10 & 11: Building a Compiler**
   - Designing and completing the Jack compiler.
 
@@ -61,4 +61,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - GitHub Profile: https://github.com/liramkreiner
 - Contact: liramkreiner@gmail.com
 
-Thank you for visiting my repository! 🚀  
+Thank you for visiting my repository! 🚀
