@@ -1,0 +1,14 @@
+# HDL files
+*.hdl linguist-language=Verilog
+
+# Assembly files
+*.asm linguist-language=Assembly
+
+# Jack programming language files
+*.jack linguist-language=Java
+
+# VM translator files
+*.vm linguist-language=Java
+
+# Exclude test scripts from language statistics
+tests/* linguist-vendored
